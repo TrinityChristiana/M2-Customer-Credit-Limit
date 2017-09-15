@@ -1,0 +1,43 @@
+// Trinity Terry
+// 09/13/17
+// Pseudocode for Module 2 programming problem.
+// This program will calculate customers's 
+// new credit limit after a 25% decrease.
+
+main()
+    //Declare Variables
+    Declare Real customerCredit, creditDecrease, creditNew, limitCut;
+    Declare Int accountNumber
+
+    // Function Calls
+    Call getAccountNumber(accountNumber)
+    Call getCustomerCredit(customerCredit)
+    Call calcCreditDecrease(creditDecrease, customerCredit, limitCut)
+    Call calcCreditNew(creditNew, creditDecrease, customerCredit)
+    Call displayOutput(creditNew, accountNumber)
+End Module
+
+
+
+Module getAccountNumber(Ref Int accountNumber)
+    Display "Enter Account Number"
+    Input accountNumber
+End Module
+
+Module getCustomerCredit(Ref Real customerCredit)
+    Display "Enter current credit limit"
+    Input customerCredit
+End Module
+
+Module calcCreditDecrease(Ref Real creditDecrease, Real customerCredit, Real limitCut)
+    Set creditDecrease = customerCredit * limitCut
+End Module
+
+Module calcCreditNew(Ref Real creditNew, Real creditDecrease, Real customerCredit)
+    Set creditNew = customerCredit-creditDecrease;
+End Module
+
+Module displayOutput(Real creditNew, Real accountNumber)
+    Display "Account Number: " + accountNumber 
+    "\n\nYour new credit limit is: " +creditNew
+End Module
