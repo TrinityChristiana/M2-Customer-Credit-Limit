@@ -38,7 +38,6 @@ function getCustomerCredit(customerCredit)
 //This module will calculate the amount of credit decrease
 function calcCreditDecrease(creditDecrease, customerCredit, limitCut)
 {
-    limitcut = .25
     return creditDecrease = customerCredit * limitCut
 }
 
